@@ -1,0 +1,59 @@
+body {
+    color: black;
+    background-color: #fff
+}
+
+body ol {
+    padding: 0.2em 0.5em 0;
+}
+
+body ol li {
+    list-style-position: inside;
+    margin: 0.3em;
+}
+
+.top {
+    padding: 0 1em 0.5em;
+}
+
+.qa {
+    background: #ddd;
+    border: 1px solid #bebab0;
+    display: block;
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
+.asrc {
+    margin: 0;
+    padding: 0.5em 5px;
+    background-color: #ddd;
+    font-size: 14px;
+}
+
+.src {
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.qsrc {
+    padding: 0.5em 1em;
+    margin: 10px;
+    border: 1px #000 dotted;
+    background-color: #eee
+}
+
+.question {
+    padding: 0.5em 1em 0;
+}
+
+.answer {
+    margin: 0 0 0.5em 1em;
+}
+
+#score {
+    border: 1px solid #bebab0;
+    margin: 1em 1em;
+    padding: 1em;
+    display: block;
+}

@@ -1,0 +1,598 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>JavaScript quiz</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="jsquiz.css" type="text/css">
+</head>
+<body>
+    <div class='top'>Сборник небольших задач разного уровня на знание и понимание JavaScript.</div>
+    <div class='top'>Источниками послужили:
+        <ul>
+            <li><a href='http://dmitrysoshnikov.com/ecmascript/the-quiz/'>http://dmitrysoshnikov.com/ecmascript/the-quiz/</a></li>
+            <li><a href='http://perfectionkills.com/javascript-quiz/'>http://perfectionkills.com/javascript-quiz/</a></li>
+            <li><a href='http://dmitry.baranovskiy.com/post/91403200'>http://dmitry.baranovskiy.com/post/91403200</a></li>
+            <li><a href='http://bonsaiden.github.com/JavaScript-Garden/'>http://bonsaiden.github.com/JavaScript-Garden/</a></li>
+        </ul>
+    </div>
+
+    <input type="button" value="Запустить таймер (начать тест)" id="startTime"/>
+
+    <ol>
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log(parseInt('123abc'));</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q1' id='q1a0' /><label for='q1a0' class='src asrc' id='q1a0e'>NaN</label></li>
+                    <li><input type='radio' name='q1' id='q1a1' /><label for='q1a1' class='src asrc' id='q1a1e'>123</label></li>
+                    <li><input type='radio' name='q1' id='q1a2' /><label for='q1a2' class='src asrc' id='q1a2e'>abc</label></li>
+                    <li><input type='radio' name='q1' id='q1a3' /><label for='q1a3' class='src asrc' id='q1a3e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log('abc' + 1 + 2);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q2' id='q2a0' /><label for='q2a0' class='src asrc' id='q2a0e'>abc3</label></li>
+                    <li><input type='radio' name='q2' id='q2a1' /><label for='q2a1' class='src asrc' id='q2a1e'>NaN</label></li>
+                    <li><input type='radio' name='q2' id='q2a2' /><label for='q2a2' class='src asrc' id='q2a2e'>abc12</label></li>
+                    <li><input type='radio' name='q2' id='q2a3' /><label for='q2a3' class='src asrc' id='q2a3e'>3</label></li>
+                    <li><input type='radio' name='q2' id='q2a4' /><label for='q2a4' class='src asrc' id='q2a4e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var x = 0;
+console.log((x = 1) ? 2 : 3);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q3' id='q3a0' /><label for='q3a0' class='src asrc' id='q3a0e'>0</label></li>
+                    <li><input type='radio' name='q3' id='q3a1' /><label for='q3a1' class='src asrc' id='q3a1e'>1</label></li>
+                    <li><input type='radio' name='q3' id='q3a2' /><label for='q3a2' class='src asrc' id='q3a2e'>2</label></li>
+                    <li><input type='radio' name='q3' id='q3a3' /><label for='q3a3' class='src asrc' id='q3a3e'>3</label></li>
+                    <li><input type='radio' name='q3' id='q3a4' /><label for='q3a4' class='src asrc' id='q3a4e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">undefined = 1;
+console.log(undefined);
+delete undefined;
+console.log(undefined);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q4' id='q4a0' /><label for='q4a0' class='src asrc' id='q4a0e'>undefined undefined</label></li>
+                    <li><input type='radio' name='q4' id='q4a1' /><label for='q4a1' class='src asrc' id='q4a1e'>1 undefined</label></li>
+                    <li><input type='radio' name='q4' id='q4a2' /><label for='q4a2' class='src asrc' id='q4a2e'>1 1</label></li>
+                    <li><input type='radio' name='q4' id='q4a3' /><label for='q4a3' class='src asrc' id='q4a3e'>undefined 1</label></li>
+                    <li><input type='radio' name='q4' id='q4a4' /><label for='q4a4' class='src asrc' id='q4a4e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log(NaN + 'NaN');</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q5' id='q5a0' /><label for='q5a0' class='src asrc' id='q5a0e'>NaN</label></li>
+                    <li><input type='radio' name='q5' id='q5a1' /><label for='q5a1' class='src asrc' id='q5a1e'>NaNNaN</label></li>
+                    <li><input type='radio' name='q5' id='q5a2' /><label for='q5a2' class='src asrc' id='q5a2e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var x, y;
+console.log(x = y);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q6' id='q6a0' /><label for='q6a0' class='src asrc' id='q6a0e'>undefined</label></li>
+                    <li><input type='radio' name='q6' id='q6a1' /><label for='q6a1' class='src asrc' id='q6a1e'>null</label></li>
+                    <li><input type='radio' name='q6' id='q6a2' /><label for='q6a2' class='src asrc' id='q6a2e'>true</label></li>
+                    <li><input type='radio' name='q6' id='q6a3' /><label for='q6a3' class='src asrc' id='q6a3e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">for (var s = ''; !s; s++) console.log('test');</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q7' id='q7a0' /><label for='q7a0' class='asrc' id='q7a0e'>empty output</label></li>
+                    <li><input type='radio' name='q7' id='q7a1' /><label for='q7a1' class='src asrc' id='q7a1e'>test</label></li>
+                    <li><input type='radio' name='q7' id='q7a2' /><label for='q7a2' class='src asrc' id='q7a2e'>test test</label></li>
+                    <li><input type='radio' name='q7' id='q7a3' /><label for='q7a3' class='src asrc' id='q7a3e'>test test test ...</label></li>
+                    <li><input type='radio' name='q7' id='q7a4' /><label for='q7a4' class='src asrc' id='q7a4e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log(1 && 2);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q8' id='q8a0' /><label for='q8a0' class='src asrc' id='q8a0e'>NaN</label></li>
+                    <li><input type='radio' name='q8' id='q8a1' /><label for='q8a1' class='src asrc' id='q8a1e'>1</label></li>
+                    <li><input type='radio' name='q8' id='q8a2' /><label for='q8a2' class='src asrc' id='q8a2e'>2</label></li>
+                    <li><input type='radio' name='q8' id='q8a3' /><label for='q8a3' class='src asrc' id='q8a3e'>3</label></li>
+                    <li><input type='radio' name='q8' id='q8a4' /><label for='q8a4' class='src asrc' id='q8a4e'>true</label></li>
+                    <li><input type='radio' name='q8' id='q8a5' /><label for='q8a5' class='src asrc' id='q8a5e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var s = 'test';
+s.test = 'test';
+console.log(s.test);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q9' id='q9a0' /><label for='q9a0' class='src asrc' id='q9a0e'>test</label></li>
+                    <li><input type='radio' name='q9' id='q9a1' /><label for='q9a1' class='src asrc' id='q9a1e'>null</label></li>
+                    <li><input type='radio' name='q9' id='q9a2' /><label for='q9a2' class='src asrc' id='q9a2e'>undefined</label></li>
+                    <li><input type='radio' name='q9' id='q9a3' /><label for='q9a3' class='src asrc' id='q9a3e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var a = [1, 2], b = [1, 2];
+a['3'] = 3;
+b['3b'] = 3;
+console.log(a.length + ' ' + b.length);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q10' id='q10a0' /><label for='q10a0' class='src asrc' id='q10a0e'>2 2</label></li>
+                    <li><input type='radio' name='q10' id='q10a1' /><label for='q10a1' class='src asrc' id='q10a1e'>2 3</label></li>
+                    <li><input type='radio' name='q10' id='q10a2' /><label for='q10a2' class='src asrc' id='q10a2e'>2 4</label></li>
+                    <li><input type='radio' name='q10' id='q10a3' /><label for='q10a3' class='src asrc' id='q10a3e'>3 2</label></li>
+                    <li><input type='radio' name='q10' id='q10a4' /><label for='q10a4' class='src asrc' id='q10a4e'>3 3</label></li>
+                    <li><input type='radio' name='q10' id='q10a5' /><label for='q10a5' class='src asrc' id='q10a5e'>4 2</label></li>
+                    <li><input type='radio' name='q10' id='q10a6' /><label for='q10a6' class='src asrc' id='q10a6e'>4 3</label></li>
+                    <li><input type='radio' name='q10' id='q10a7' /><label for='q10a7' class='src asrc' id='q10a7e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var x = { x: x };
+console.log(x.x);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q11' id='q11a0' /><label for='q11a0' class='src asrc' id='q11a0e'>null</label></li>
+                    <li><input type='radio' name='q11' id='q11a1' /><label for='q11a1' class='src asrc' id='q11a1e'>undefined</label></li>
+                    <li><input type='radio' name='q11' id='q11a2' /><label for='q11a2' class='src asrc' id='q11a2e'>x</label></li>
+                    <li><input type='radio' name='q11' id='q11a3' /><label for='q11a3' class='src asrc' id='q11a3e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log(1 + !null + 2);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q12' id='q12a0' /><label for='q12a0' class='src asrc' id='q12a0e'>NaN</label></li>
+                    <li><input type='radio' name='q12' id='q12a1' /><label for='q12a1' class='src asrc' id='q12a1e'>1null2</label></li>
+                    <li><input type='radio' name='q12' id='q12a2' /><label for='q12a2' class='src asrc' id='q12a2e'>1!null2</label></li>
+                    <li><input type='radio' name='q12' id='q12a3' /><label for='q12a3' class='src asrc' id='q12a3e'>12</label></li>
+                    <li><input type='radio' name='q12' id='q12a4' /><label for='q12a4' class='src asrc' id='q12a4e'>2</label></li>
+                    <li><input type='radio' name='q12' id='q12a5' /><label for='q12a5' class='src asrc' id='q12a5e'>3</label></li>
+                    <li><input type='radio' name='q12' id='q12a6' /><label for='q12a6' class='src asrc' id='q12a6e'>4</label></li>
+                    <li><input type='radio' name='q12' id='q12a7' /><label for='q12a7' class='src asrc' id='q12a7e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log(10+ +'10'+ +10);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q13' id='q13a0' /><label for='q13a0' class='src asrc' id='q13a0e'>NaN</label></li>
+                    <li><input type='radio' name='q13' id='q13a1' /><label for='q13a1' class='src asrc' id='q13a1e'>10</label></li>
+                    <li><input type='radio' name='q13' id='q13a2' /><label for='q13a2' class='src asrc' id='q13a2e'>20</label></li>
+                    <li><input type='radio' name='q13' id='q13a3' /><label for='q13a3' class='src asrc' id='q13a3e'>30</label></li>
+                    <li><input type='radio' name='q13' id='q13a4' /><label for='q13a4' class='src asrc' id='q13a4e'>101010</label></li>
+                    <li><input type='radio' name='q13' id='q13a5' /><label for='q13a5' class='src asrc' id='q13a5e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log((1,5 - 1) * 2);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q14' id='q14a0' /><label for='q14a0' class='src asrc' id='q14a0e'>NaN</label></li>
+                    <li><input type='radio' name='q14' id='q14a1' /><label for='q14a1' class='src asrc' id='q14a1e'>0.9999999999</label></li>
+                    <li><input type='radio' name='q14' id='q14a2' /><label for='q14a2' class='src asrc' id='q14a2e'>1</label></li>
+                    <li><input type='radio' name='q14' id='q14a3' /><label for='q14a3' class='src asrc' id='q14a3e'>1.5</label></li>
+                    <li><input type='radio' name='q14' id='q14a4' /><label for='q14a4' class='src asrc' id='q14a4e'>2</label></li>
+                    <li><input type='radio' name='q14' id='q14a5' /><label for='q14a5' class='src asrc' id='q14a5e'>4</label></li>
+                    <li><input type='radio' name='q14' id='q14a6' /><label for='q14a6' class='src asrc' id='q14a6e'>8</label></li>
+                    <li><input type='radio' name='q14' id='q14a7' /><label for='q14a7' class='src asrc' id='q14a7e'>0</label></li>
+                    <li><input type='radio' name='q14' id='q14a8' /><label for='q14a8' class='src asrc' id='q14a8e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log(100['toString']['length']);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q15' id='q15a0' /><label for='q15a0' class='src asrc' id='q15a0e'>NaN</label></li>
+                    <li><input type='radio' name='q15' id='q15a1' /><label for='q15a1' class='src asrc' id='q15a1e'>null</label></li>
+                    <li><input type='radio' name='q15' id='q15a2' /><label for='q15a2' class='src asrc' id='q15a2e'>undefined</label></li>
+                    <li><input type='radio' name='q15' id='q15a3' /><label for='q15a3' class='src asrc' id='q15a3e'>0</label></li>
+                    <li><input type='radio' name='q15' id='q15a4' /><label for='q15a4' class='src asrc' id='q15a4e'>1</label></li>
+                    <li><input type='radio' name='q15' id='q15a5' /><label for='q15a5' class='src asrc' id='q15a5e'>100</label></li>
+                    <li><input type='radio' name='q15' id='q15a6' /><label for='q15a6' class='src asrc' id='q15a6e'>3</label></li>
+                    <li><input type='radio' name='q15' id='q15a7' /><label for='q15a7' class='src asrc' id='q15a7e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the wrong (with some error) variant:</div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q16' id='q16a0' /><label for='q16a0' class='src asrc' id='q16a0e'>2.toString();</label></li>
+                    <li><input type='radio' name='q16' id='q16a1' /><label for='q16a1' class='src asrc' id='q16a1e'>2..toString();</label></li>
+                    <li><input type='radio' name='q16' id='q16a2' /><label for='q16a2' class='src asrc' id='q16a2e'>2 .toString();</label></li>
+                    <li><input type='radio' name='q16' id='q16a3' /><label for='q16a3' class='src asrc' id='q16a3e'>(2).toString();</label></li>
+                    <li><input type='radio' name='q16' id='q16a4' /><label for='q16a4' class='asrc' id='q16a4e'>all variants are correct</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var x = 1;
+console.log({ x: x }.x + x);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q17' id='q17a0' /><label for='q17a0' class='src asrc' id='q17a0e'>NaN</label></li>
+                    <li><input type='radio' name='q17' id='q17a1' /><label for='q17a1' class='src asrc' id='q17a1e'>null</label></li>
+                    <li><input type='radio' name='q17' id='q17a2' /><label for='q17a2' class='src asrc' id='q17a2e'>undefined</label></li>
+                    <li><input type='radio' name='q17' id='q17a3' /><label for='q17a3' class='src asrc' id='q17a3e'>0</label></li>
+                    <li><input type='radio' name='q17' id='q17a4' /><label for='q17a4' class='src asrc' id='q17a4e'>1</label></li>
+                    <li><input type='radio' name='q17' id='q17a5' /><label for='q17a5' class='src asrc' id='q17a5e'>2</label></li>
+                    <li><input type='radio' name='q17' id='q17a6' /><label for='q17a6' class='src asrc' id='q17a6e'>4</label></li>
+                    <li><input type='radio' name='q17' id='q17a7' /><label for='q17a7' class='src asrc' id='q17a7e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">function f() {
+    var x = 1;
+    return {
+        a: function() { x++ },
+        b: function() { console.log(x) }
+    };
+}
+
+var o = f();
+
+o.a();
+o.b();</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q18' id='q18a0' /><label for='q18a0' class='src asrc' id='q18a0e'>NaN</label></li>
+                    <li><input type='radio' name='q18' id='q18a1' /><label for='q18a1' class='src asrc' id='q18a1e'>null</label></li>
+                    <li><input type='radio' name='q18' id='q18a2' /><label for='q18a2' class='src asrc' id='q18a2e'>undefined</label></li>
+                    <li><input type='radio' name='q18' id='q18a3' /><label for='q18a3' class='src asrc' id='q18a3e'>0</label></li>
+                    <li><input type='radio' name='q18' id='q18a4' /><label for='q18a4' class='src asrc' id='q18a4e'>1</label></li>
+                    <li><input type='radio' name='q18' id='q18a5' /><label for='q18a5' class='src asrc' id='q18a5e'>2</label></li>
+                    <li><input type='radio' name='q18' id='q18a6' /><label for='q18a6' class='src asrc' id='q18a6e'>4</label></li>
+                    <li><input type='radio' name='q18' id='q18a7' /><label for='q18a7' class='src asrc' id='q18a7e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var x = 1;
+
+function f() {
+    x = 2;
+    var x = 3;
+}
+
+f();
+
+console.log(x);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q19' id='q19a0' /><label for='q19a0' class='src asrc' id='q19a0e'>NaN</label></li>
+                    <li><input type='radio' name='q19' id='q19a1' /><label for='q19a1' class='src asrc' id='q19a1e'>null</label></li>
+                    <li><input type='radio' name='q19' id='q19a2' /><label for='q19a2' class='src asrc' id='q19a2e'>undefined</label></li>
+                    <li><input type='radio' name='q19' id='q19a3' /><label for='q19a3' class='src asrc' id='q19a3e'>1</label></li>
+                    <li><input type='radio' name='q19' id='q19a4' /><label for='q19a4' class='src asrc' id='q19a4e'>2</label></li>
+                    <li><input type='radio' name='q19' id='q19a5' /><label for='q19a5' class='src asrc' id='q19a5e'>3</label></li>
+                    <li><input type='radio' name='q19' id='q19a6' /><label for='q19a6' class='src asrc' id='q19a6e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log(typeof typeof(null));</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q20' id='q20a0' /><label for='q20a0' class='src asrc' id='q20a0e'>null</label></li>
+                    <li><input type='radio' name='q20' id='q20a1' /><label for='q20a1' class='src asrc' id='q20a1e'>undefined</label></li>
+                    <li><input type='radio' name='q20' id='q20a2' /><label for='q20a2' class='src asrc' id='q20a2e'>string</label></li>
+                    <li><input type='radio' name='q20' id='q20a3' /><label for='q20a3' class='src asrc' id='q20a3e'>object</label></li>
+                    <li><input type='radio' name='q20' id='q20a4' /><label for='q20a4' class='src asrc' id='q20a4e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">function f() {
+    var a = [];
+    for (var i = 0; i !== 4; i++) a[i] = function() { console.log(i) };
+    return a;
+}
+
+f()[1]();</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q21' id='q21a0' /><label for='q21a0' class='src asrc' id='q21a0e'>NaN</label></li>
+                    <li><input type='radio' name='q21' id='q21a1' /><label for='q21a1' class='src asrc' id='q21a1e'>null</label></li>
+                    <li><input type='radio' name='q21' id='q21a2' /><label for='q21a2' class='src asrc' id='q21a2e'>undefined</label></li>
+                    <li><input type='radio' name='q21' id='q21a3' /><label for='q21a3' class='src asrc' id='q21a3e'>1</label></li>
+                    <li><input type='radio' name='q21' id='q21a4' /><label for='q21a4' class='src asrc' id='q21a4e'>2</label></li>
+                    <li><input type='radio' name='q21' id='q21a5' /><label for='q21a5' class='src asrc' id='q21a5e'>3</label></li>
+                    <li><input type='radio' name='q21' id='q21a6' /><label for='q21a6' class='src asrc' id='q21a6e'>4</label></li>
+                    <li><input type='radio' name='q21' id='q21a7' /><label for='q21a7' class='src asrc' id='q21a7e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var s = 'a';
+
+switch(s) {
+    default:
+        console.log('x');
+    case 'a':
+        console.log('y');
+}</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q22' id='q22a0' /><label for='q22a0' class='asrc' id='q22a0e'>empty output</label></li>
+                    <li><input type='radio' name='q22' id='q22a1' /><label for='q22a1' class='src asrc' id='q22a1e'>x</label></li>
+                    <li><input type='radio' name='q22' id='q22a2' /><label for='q22a2' class='src asrc' id='q22a2e'>y</label></li>
+                    <li><input type='radio' name='q22' id='q22a3' /><label for='q22a3' class='src asrc' id='q22a3e'>x y</label></li>
+                    <li><input type='radio' name='q22' id='q22a4' /><label for='q22a4' class='src asrc' id='q22a4e'>y x</label></li>
+                    <li><input type='radio' name='q22' id='q22a5' /><label for='q22a5' class='src asrc' id='q22a5e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the wrong (with some error) variant of the function call:</div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q23' id='q23a0' /><label for='q23a0' class='src asrc' id='q23a0e'>-function f(x){ console.log(x) }(10);</label></li>
+                    <li><input type='radio' name='q23' id='q23a1' /><label for='q23a1' class='src asrc' id='q23a1e'>+function f(x){ console.log(x) }(10);</label></li>
+                    <li><input type='radio' name='q23' id='q23a2' /><label for='q23a2' class='src asrc' id='q23a2e'>!function f(x){ console.log(x) }(10);</label></li>
+                    <li><input type='radio' name='q23' id='q23a3' /><label for='q23a3' class='src asrc' id='q23a3e'>(function f(x){ console.log(x) })(10);</label></li>
+                    <li><input type='radio' name='q23' id='q23a4' /><label for='q23a4' class='src asrc' id='q23a4e'>(function f(x){ console.log(x) }(10));</label></li>
+                    <li><input type='radio' name='q23' id='q23a5' /><label for='q23a5' class='asrc' id='q23a5e'>all variants are wrong</label></li>
+                    <li><input type='radio' name='q23' id='q23a6' /><label for='q23a6' class='asrc' id='q23a6e'>all variants are correct</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var a = ['a', 'b'];
+
+(a = a.concat(a.splice(0, 0, 'c'))).push(a.slice().shift());
+
+console.log(a.join(', '));</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q24' id='q24a0' /><label for='q24a0' class='src asrc' id='q24a0e'>a, b</label></li>
+                    <li><input type='radio' name='q24' id='q24a1' /><label for='q24a1' class='src asrc' id='q24a1e'>a, b, c</label></li>
+                    <li><input type='radio' name='q24' id='q24a2' /><label for='q24a2' class='src asrc' id='q24a2e'>c, a, b</label></li>
+                    <li><input type='radio' name='q24' id='q24a3' /><label for='q24a3' class='src asrc' id='q24a3e'>c, c, a, b</label></li>
+                    <li><input type='radio' name='q24' id='q24a4' /><label for='q24a4' class='src asrc' id='q24a4e'>a, b, c, c</label></li>
+                    <li><input type='radio' name='q24' id='q24a5' /><label for='q24a5' class='src asrc' id='q24a5e'>c, a, b, c</label></li>
+                    <li><input type='radio' name='q24' id='q24a6' /><label for='q24a6' class='src asrc' id='q24a6e'>c, a, c</label></li>
+                    <li><input type='radio' name='q24' id='q24a7' /><label for='q24a7' class='src asrc' id='q24a7e'>c, b, c</label></li>
+                    <li><input type='radio' name='q24' id='q24a8' /><label for='q24a8' class='src asrc' id='q24a8e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log('2' in ['a', 'b', 'c']);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q25' id='q25a0' /><label for='q25a0' class='src asrc' id='q25a0e'>null</label></li>
+                    <li><input type='radio' name='q25' id='q25a1' /><label for='q25a1' class='src asrc' id='q25a1e'>undefined</label></li>
+                    <li><input type='radio' name='q25' id='q25a2' /><label for='q25a2' class='src asrc' id='q25a2e'>false</label></li>
+                    <li><input type='radio' name='q25' id='q25a3' /><label for='q25a3' class='src asrc' id='q25a3e'>true</label></li>
+                    <li><input type='radio' name='q25' id='q25a4' /><label for='q25a4' class='src asrc' id='q25a4e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log(' \t\r\n' == 0);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q26' id='q26a0' /><label for='q26a0' class='src asrc' id='q26a0e'>null</label></li>
+                    <li><input type='radio' name='q26' id='q26a1' /><label for='q26a1' class='src asrc' id='q26a1e'>undefined</label></li>
+                    <li><input type='radio' name='q26' id='q26a2' /><label for='q26a2' class='src asrc' id='q26a2e'>false</label></li>
+                    <li><input type='radio' name='q26' id='q26a3' /><label for='q26a3' class='src asrc' id='q26a3e'>true</label></li>
+                    <li><input type='radio' name='q26' id='q26a4' /><label for='q26a4' class='src asrc' id='q26a4e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log({} === {});</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q27' id='q27a0' /><label for='q27a0' class='src asrc' id='q27a0e'>null</label></li>
+                    <li><input type='radio' name='q27' id='q27a1' /><label for='q27a1' class='src asrc' id='q27a1e'>undefined</label></li>
+                    <li><input type='radio' name='q27' id='q27a2' /><label for='q27a2' class='src asrc' id='q27a2e'>false</label></li>
+                    <li><input type='radio' name='q27' id='q27a3' /><label for='q27a3' class='src asrc' id='q27a3e'>true</label></li>
+                    <li><input type='radio' name='q27' id='q27a4' /><label for='q27a4' class='src asrc' id='q27a4e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">console.log(!!'0');</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q28' id='q28a0' /><label for='q28a0' class='src asrc' id='q28a0e'>NaN</label></li>
+                    <li><input type='radio' name='q28' id='q28a1' /><label for='q28a1' class='src asrc' id='q28a1e'>null</label></li>
+                    <li><input type='radio' name='q28' id='q28a2' /><label for='q28a2' class='src asrc' id='q28a2e'>undefined</label></li>
+                    <li><input type='radio' name='q28' id='q28a3' /><label for='q28a3' class='src asrc' id='q28a3e'>false</label></li>
+                    <li><input type='radio' name='q28' id='q28a4' /><label for='q28a4' class='src asrc' id='q28a4e'>true</label></li>
+                    <li><input type='radio' name='q28' id='q28a5' /><label for='q28a5' class='src asrc' id='q28a5e'>0</label></li>
+                    <li><input type='radio' name='q28' id='q28a6' /><label for='q28a6' class='src asrc' id='q28a6e'>1</label></li>
+                    <li><input type='radio' name='q28' id='q28a7' /><label for='q28a7' class='src asrc' id='q28a7e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">function f(x) {
+    return
+    {
+        a: x + 1
+    };
+}
+
+console.log(f(10).a);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q29' id='q29a0' /><label for='q29a0' class='src asrc' id='q29a0e'>NaN</label></li>
+                    <li><input type='radio' name='q29' id='q29a1' /><label for='q29a1' class='src asrc' id='q29a1e'>null</label></li>
+                    <li><input type='radio' name='q29' id='q29a2' /><label for='q29a2' class='src asrc' id='q29a2e'>undefined</label></li>
+                    <li><input type='radio' name='q29' id='q29a3' /><label for='q29a3' class='src asrc' id='q29a3e'>10</label></li>
+                    <li><input type='radio' name='q29' id='q29a4' /><label for='q29a4' class='src asrc' id='q29a4e'>11</label></li>
+                    <li><input type='radio' name='q29' id='q29a5' /><label for='q29a5' class='src asrc' id='q29a5e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var x = function f() { return 1 };
+console.log(typeof f());</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q30' id='q30a0' /><label for='q30a0' class='src asrc' id='q30a0e'>null</label></li>
+                    <li><input type='radio' name='q30' id='q30a1' /><label for='q30a1' class='src asrc' id='q30a1e'>undefined</label></li>
+                    <li><input type='radio' name='q30' id='q30a2' /><label for='q30a2' class='src asrc' id='q30a2e'>object</label></li>
+                    <li><input type='radio' name='q30' id='q30a3' /><label for='q30a3' class='src asrc' id='q30a3e'>function</label></li>
+                    <li><input type='radio' name='q30' id='q30a4' /><label for='q30a4' class='src asrc' id='q30a4e'>number</label></li>
+                    <li><input type='radio' name='q30' id='q30a5' /><label for='q30a5' class='src asrc' id='q30a5e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">function f(x) {
+    delete x;
+    return x;
+}
+
+console.log(f(1));</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q31' id='q31a0' /><label for='q31a0' class='src asrc' id='q31a0e'>null</label></li>
+                    <li><input type='radio' name='q31' id='q31a1' /><label for='q31a1' class='src asrc' id='q31a1e'>undefined</label></li>
+                    <li><input type='radio' name='q31' id='q31a2' /><label for='q31a2' class='src asrc' id='q31a2e'>1</label></li>
+                    <li><input type='radio' name='q31' id='q31a3' /><label for='q31a3' class='src asrc' id='q31a3e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+        <li>
+            <div class='qa'>
+                <div class='question'>Choose the result of:<div class="src qsrc">var x = (
+    function f() {
+        function f() { return 1 };
+        return f();
+        function f() { return 2 }
+    }
+)();
+
+console.log(x);</div></div>
+                <ol class='answer'>
+                    <li><input type='radio' name='q32' id='q32a0' /><label for='q32a0' class='src asrc' id='q32a0e'>null</label></li>
+                    <li><input type='radio' name='q32' id='q32a1' /><label for='q32a1' class='src asrc' id='q32a1e'>undefined</label></li>
+                    <li><input type='radio' name='q32' id='q32a2' /><label for='q32a2' class='src asrc' id='q32a2e'>1</label></li>
+                    <li><input type='radio' name='q32' id='q32a3' /><label for='q32a3' class='src asrc' id='q32a3e'>2</label></li>
+                    <li><input type='radio' name='q32' id='q32a4' /><label for='q32a4' class='src asrc' id='q32a4e'>some error</label></li>
+                </ol>
+            </div>
+        </li>
+
+    </ol>
+
+    <input type="button" value="Получить результат" id="result"/>
+
+    <div id='score'></div>
+
+    <script type="text/javascript">
+        var score = -1,
+            st;
+
+        document.getElementById('startTime').onclick = function() {
+            st = new Date();
+        };
+
+        document.getElementById('result').onclick = function() {
+            var correct = [1, 2, 2, 2, 1, 0, 1, 2, 2, 5, 1, 6, 3, 6, 4, 0, 5, 5, 3, 2, 6, 2, 6, 5, 3, 3, 2, 4, 5, 5, 2, 3],
+                qname,
+                i, j, r,
+                checkedId, correctId,
+                t, timestring;
+
+            if (score === -1) {
+                score = 0;
+                
+                for (i = 0; i < correct.length; i++) {
+                    qname = 'q' + (i + 1);
+                    correctId = qname + 'a' + correct[i];
+                    checkedId = null;
+
+                    r = document.getElementsByName(qname);
+                    for (j = 0; j < r.length; j++) {
+                        if (r[j].checked) {
+                            checkedId = r[j].id;
+                            break;
+                        }
+                    }
+
+                    document.getElementById(correctId + 'e').style.color = '#0c0';
+
+                    if (checkedId && checkedId != correctId) document.getElementById(checkedId + 'e').style.color = 'red';
+                    if (checkedId === correctId) score++;
+                }
+
+                if (st) {
+                    t = new Date(new Date().getTime() - st.getTime());
+                    timestring = ((i = t.getUTCHours()) < 10 ? '0' + i : i) + ':' +
+                                 ((i = t.getUTCMinutes()) < 10 ? '0' + i : i) + ':' +
+                                 ((i = t.getUTCSeconds()) < 10 ? '0' + i : i);
+                }
+
+                document.getElementById('score').innerHTML = 'Правильных ответов: ' + score + ' из ' + correct.length +
+                        (timestring ? ', время прохождения: ' + timestring : '');
+            }
+        };
+
+
+    </script>
+
+</body>
+</html>
